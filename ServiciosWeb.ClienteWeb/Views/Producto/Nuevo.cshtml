@@ -1,0 +1,53 @@
+﻿@model Producto
+@{
+    ViewBag.Title = "Nuevo";
+}
+
+<h2>Nuevo Producto</h2>
+<hr/>
+<form method="post" action="Url.Action("Nuevo","Producto")">
+    <div class="form-group">
+        <label>ProductID</label>
+        @Html.TextBoxFor(x => x.ProductID, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>ProductName</label>
+        @Html.TextBoxFor(x => x.ProductName, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>SupplierID</label>
+        @Html.TextBoxFor(x => x.SupplierID, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>CategoryID</label>
+        @Html.TextBoxFor(x => x.CategoryID, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>QuantityPerUnit</label>
+        @Html.TextBoxFor(x => x.QuantityPerUnit, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>UnitPrice</label>
+        @Html.TextBoxFor(x => x.UnitPrice, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>UnitsInStock</label>
+        @Html.TextBoxFor(x => x.UnitsInStock, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>UnitsOnOrder</label>
+        @Html.TextBoxFor(x => x.UnitsOnOrder, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>ReorderLevel</label>
+        @Html.TextBoxFor(x => x.ReorderLevel, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Discontinued</label>
+        @Html.TextBoxFor(x => x.Discontinued, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <input type="submit" class="btn btn-success" value="ENVIAR" />
+        <a href="@Url.Action("Index","Producto")">Regresar</a>
+    </div>
+</form>
